@@ -1,0 +1,24 @@
+{
+  "name": "@sa0001/tap-teamcity",
+  "version": "0.0.11",
+  "author": "sa0001",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sa-0001/tap-teamcity-js.git"
+  },
+  "main": "dist/index.js",
+  "scripts": {
+    "prepare": "rm -rf ./dist ; mkdir ./dist ; coffee --bare --output ./dist --compile ./src",
+    "publish": "npm run prepare ; npm publish --access public",
+    "test": "node ./dist/test.js"
+  },
+  "devDependencies": {
+    "coffeescript": "^2.5.1",
+    "tap": "^14.6.9"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "tap-parser": "^10.1.0"
+  }
+}
